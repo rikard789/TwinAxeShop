@@ -1,6 +1,7 @@
 import React from "react";
 import './navbar.css';
 import logo from '../images/twinaxe_art.jpeg'
+import cart from '../images/cart-svgrepo-com.svg'
 
 class Navbar extends React.Component {
     
@@ -15,10 +16,14 @@ class Navbar extends React.Component {
                     </div>
                     {/* Navigation Links */}
                     <div className="flex space-x-4">
-                        <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="/signin" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
-                        <a href="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Log In</a>
-                        <a href="/cart" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cart</a>
+                        <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="/signin" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
+                        <a href="/login" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Log In</a>
+                        {/* <a href="/cart" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> */}
+                        <a href="/cart" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">   
+                            <img className="h-8 w-auto mr-2" src={cart} alt="Cart Icon" />
+                            <span>Cart</span>
+                        </a>
                     </div>
                 </div>
             </nav>

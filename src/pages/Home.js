@@ -1,8 +1,22 @@
 import React from "react";
+import './Home.css';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = {
+    //   username: '',
+    //   email: '',
+    //   password: ''
+    // };
+  }
     render() {
-        return <h1>Hello, World</h1>;
+        return (
+          <div class="h-screen bg-indigo-100">
+            <div>Hello, World</div>
+          </div>
+          
+        ) 
       }
 }
 

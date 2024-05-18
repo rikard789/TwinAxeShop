@@ -26,17 +26,6 @@ class LogIn extends React.Component {
 
     render() {
         return (
-
-            // <Field>
-            //     <Label>Full name</Label>
-            //     <Input email="email here" onChange={this.handleInputChange}/>
-
-            //     <Label>Full name</Label>
-            //     <Input type='password' password="password here" onChange={this.handleInputChange} />
-
-            //     <Button>Log in</Button>
-            // </Field>
-
             <div class="h-screen bg-indigo-100 flex justify-center items-center">
                 <div class="lg:w-2/5 md:w-1/2 w-2/3">
                     <form class="bg-white p-10 rounded-lg shadow-lg min-w-full">
