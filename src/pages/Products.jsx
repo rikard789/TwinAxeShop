@@ -63,57 +63,41 @@ class Products extends React.Component{
 //       .catch(error => console.error('Error fetching products:', error));
 //   }, []);
 
-  render() {
-        return (
-            // <div className="container mx-auto py-8">
-            // <h1 className="text-2xl font-bold mb-4">Products</h1>
-            // <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            //     {products.map(product => (
-            //         <div key={product.id} className="border rounded-lg p-4">
-            //             <h2 className="text-lg font-semibold">{product.name}</h2>
-            //             <p className="text-gray-600">${product.price.toFixed(2)}</p>
-            //         </div>
-            //     ))}
-            // </div>
-            // </div>
-            <div className="container mx-auto py-8">
-                {/* <h1 className="text-2xl font-bold mb-4">Products</h1> */}
-                <div className="grid grid-cols-1 gap-4">
-                    <div className="bg-gray-200 p-4 ml-2 mr-2 mt-2">
-                        {products.map(product => (
-                        <div className="border-8 border-sky-500 p-3 mt-4">
-                            <div className="flex items-start justify-between w-full">
-                                <div className="flex items-start">
-                                    <button>
-                                        <img src={product.image} alt="Axe" className="w-72 h-48 border-2 rounded border-green-500" />
-                                    </button>
-                                    <div className="ml-4">
-                                        <button className="text-black font-bold p-2 text-2xl">
-                                            product.name
-                                        </button>
-                                        <p>product.description</p>
-                                        {/* <p className="ml-2 text-black text-xl">• Product spec 1</p>
-                                        <p className="ml-2 mt-2 text-black text-xl">• Product spec 2</p>
-                                        <p className="ml-2 mt-2 text-black text-xl">• Product spec 3</p>
-                                        <p className="ml-2 mt-2 text-black text-xl">• Product spec 4</p> */}
-                                    </div>
-                                </div>
-                                <div className="ml-4">
-                                    <p className="text-black font-bold text-3xl">${product.price}</p>
-                                    <button className="bg-gray-300 w-40 h-36 text-black font-bold p-2 mt-2 hover:bg-gray-400">
-                                        <p className="text-black font-bold text-2xl">ADD</p>
-                                        <p className="text-black font-bold text-2xl">TO</p>
-                                        <p className="text-black font-bold text-2xl">CART</p>
-                                    </button>
-                                </div>
+render() {
+    return (
+        <div>
+            {products.map(product => (
+                <div className="bg-gray-200 p-4 ml-2 mr-2 mt-2">
+                    <div className="flex items-start justify-between w-full">
+                        <div className="flex items-start">
+                            <button>
+                                <img src={product.image} alt="Axe"
+                                     className="w-72 h-48 border-2 rounded"/>
+
+                            </button>
+                            <div className="ml-4">
+                                <button className="text-black font-bold p-2 text-2xl">
+                                    {product.name}
+                                </button>
+                                <p>{product.description}</p>
                             </div>
                         </div>
-                        ))}
+                        <div className="ml-4">
+                            <p className="text-black font-bold text-3xl">{product.price} PLN</p>
+                            <button
+                                className="bg-gray-300 w-40 h-36 text-black font-bold p-2 mt-2 hover:bg-gray-400">
+                                <p className="text-black font-bold text-2xl">ADD</p>
+                                <p className="text-black font-bold text-2xl">TO</p>
+                                <p className="text-black font-bold text-2xl">CART</p>
+                            </button>
+                        </div>
                     </div>
-                </div>    
-            </div>
-        )
-    }
+                </div>
+            ))}
+
+        </div>
+    )
+}
 }
 
 export default Products;
