@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Navbar from "./navbar/navbar";
 import SignIn from "./pages/SignIn";
 import LogIn from "./pages/LogIn";
+import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/signin" element={<SignIn />} />
                   <Route path="/login" element={<LogIn />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/payment" element={<Payment />} />
             </Routes>
          </BrowserRouter>
       </React.Fragment>
