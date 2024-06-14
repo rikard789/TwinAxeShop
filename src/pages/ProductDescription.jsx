@@ -1,6 +1,6 @@
 import React from "react";
-import './Home.css';
-import Products from "./Products";
+import './ProductDescription.css';
+import Description from "./Description";
 
 class Home extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class Home extends React.Component {
         return (
             <div className="h-screen">
                 {/* <div>Hello, World</div> */}
-                <Products></Products>
+                <Description></Description>
             </div>
 
         )
