@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "image": "axe",
+    "name": "Axe",
+    "description": "description",
+    "price": "99.99"
+  },
+  {
+    "id": 2,
+    "image": "axe2",
+    "name": "Axe_logo",
+    "description": "description",
+    "price": "7.99"
+  }
+]

@@ -10,9 +10,8 @@ class Home extends React.Component {
         return (
             <div className="h-screen">
                 {/* <div>Hello, World</div> */}
-                <Products></Products>
+                <Products addToCart={this.props.addToCart} />
             </div>
-
         )
     }
 }
