@@ -21,10 +21,10 @@ class Payment extends React.Component {
             <div class="h-screen bg-indigo-100 flex justify-center items-center">
                 <div class="lg:w-2/5 md:w-1/2 w-2/3">
                     <form class="bg-white p-10 rounded-lg shadow-lg min-w-full">
-                        <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Delivery and payment</h1>
+                        <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Adress and payment</h1>
                         <div>
-                            <label class="text-gray-800 font-semibold block my-3 text-md" for="adress">Street adress</label>
-                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="adress" id="adress" placeholder="Street adress" />
+                            <label class="text-gray-800 font-semibold block my-3 text-md" for="adress">Street</label>
+                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="adress" id="adress" placeholder="Street" />
                         </div>
                         <div className="flex justify-between">
                             <div>

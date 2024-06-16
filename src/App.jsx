@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import Navbar from "./navbar/navbar";
 import SignIn from "./pages/SignIn";
 import LogIn from "./pages/LogIn";
+import Payment from "./pages/Payment";
 import ProductDescription from "./pages/ProductDescription";
 import Products from "./pages/Products";
 
@@ -67,6 +68,7 @@ function App() {
                         element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />}
                     />
                     <Route path="/productdescription" element={<ProductDescription />} />
+                    <Route path="/payment" element={<Payment />} />
                 </Routes>
             </Router>
         </React.Fragment>

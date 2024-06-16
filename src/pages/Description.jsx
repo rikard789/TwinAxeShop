@@ -16,39 +16,36 @@ class Products extends React.Component{
         const [product] = products;
 
         return (
-            <div>
-
-                <div className="flex items-start justify-between w-full">
-                    <div className="flex items-start">
-                        <div>
-                            <div className="bg-gray-200 p-4 ml-2 mr-2 mt-2 h-64">
-                                <div className="text-black text-center font-bold text-2xl">
-                                    {product.name}
-                                </div>
-                                <div>
-                                    <img src={product.image} alt="Axe"
-                                         className="w-72 h-48 border-2 rounded"/>
-                                </div>
+            <div className="flex items-start justify-between w-full h-full">
+                <div className="flex mr-2 ml-2 mt-2 items-start w-full h-full">
+                    <div className="mr-2 flex flex-col w-1/2 h-full">
+                        <div className="bg-gray-200 p-4 flex-grow flex flex-col">
+                            <div className="text-black text-center font-bold text-2xl">
+                                {product.name}
                             </div>
-                            <div className="bg-gray-200 p-4 ml-2 mr-2 mt-4 h-48">
-                                <div className="text-black text-2xl">
-                                    Product specifications
-                                </div>
-                                {product.specifications}
+                            <div className="flex justify-center items-center flex-grow">
+                                <img src={product.image} alt="Axe" className="rounded h-full"/>
                             </div>
                         </div>
-                        <div className="bg-gray-200 p-4 mr-2 mt-2">
-                            <div className="text-black text-center font-bold text-2xl">
-                                Description
+                        <div className="bg-gray-200 p-4 mt-2 flex-grow">
+                            <div className="text-black text-2xl">
+                                Product specifications
                             </div>
-                            <div className="text-black w-96 h-96 mt-4">
-                                {product.description}
-                            </div>
+                            {product.specifications}
+                        </div>
+                    </div>
+                    <div className="bg-gray-200 p-4 w-1/2 flex flex-col h-full">
+                        <div className="text-black text-center font-bold text-2xl">
+                            Description
+                        </div>
+                        <div className="text-black flex-grow">
+                            {product.description}
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
         )
     }
 }
