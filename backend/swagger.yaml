@@ -8,18 +8,10 @@ info:
 servers:
   - url: http://localhost:8080
     description: DEV server
-  - url: https://twinaxeshop.onrender.com
-    description: PRD server
 
 tags:
   - name: Auth
     description: Authentication endpoints
-  - name: Decks
-    description: Deck management endpoints
-  - name: Cards
-    description: Flashcard management within decks endpoints
-  - name: Questions
-    description: Questions management within decks endpoints
 
 paths:
   /auth/signup:
