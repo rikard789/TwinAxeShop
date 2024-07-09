@@ -1,0 +1,191 @@
+openapi: 3.0.0
+info:
+  title: TwinAxeShop API
+  version: 1.0.0
+  description: |
+    TwinAxeShop - online shop for people who likes white weapons such as swords, axes, polearms etc. but mainly selling axes
+
+servers:
+  - url: http://localhost:8080
+    description: DEV server
+  - url: https://twinaxeshop.onrender.com
+    description: PRD server
+
+tags:
+  - name: Auth
+    description: Authentication endpoints
+  - name: Decks
+    description: Deck management endpoints
+  - name: Cards
+    description: Flashcard management within decks endpoints
+  - name: Questions
+    description: Questions management within decks endpoints
+
+paths:
+  /auth/signup:
+    post:
+      tags:
+        - Auth
+      summary: Register a new user
+      description: This endpoint is responsible for registering new users in the system. It requires a JSON body with the user's email, and password. Upon successful registration, it returns a JWT token for authentication.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignUpRequest'
+            example:
+              firstName: John
+              lastName: Smith
+              email: user@example.com
+              password: Password12345
+      responses:
+        '200':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JwtAuthenticationResponse'
+              example:
+                token: eyJhb9.eyJzdWIiOiJkc0.yyDdclU2sZGvVLdy
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                status: 400
+                error: Bad Request
+                path: /auth/signup
+                timestamp: '2024-02-03T15:39:43.651626Z'
+                cause: Invalid request syntax or configuration.
+                action: Review and correct your request, then consult the API documentation.
+        '409':
+          description: User already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                status: 409
+                error: Conflict
+                path: /auth/signup
+                timestamp: '2024-02-03T15:39:43.651626Z'
+                cause: User with email user@example.com already exists.
+                action: Try using a different email.
+
+  /auth/signin:
+    post:
+      tags:
+        - Auth
+      summary: Authenticate a user
+      description: This endpoint authenticates users against the provided credentials (email and password) in the request body. If the credentials are valid, it responds with a JWT token that can be used for authenticated requests to other endpoints.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignInRequest'
+            example:
+              email: user@example.com
+              password: Password12345
+      responses:
+        '200':
+          description: User signed in successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JwtAuthenticationResponse'
+              example:
+                token: eyJhb9.eyJzdWIiOiJkc0.yyDdclU2sZGvVLdy
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                status: 400
+                error: Bad Request
+                path: /auth/signin
+                timestamp: '2024-02-03T15:39:43.651626Z'
+                cause: Invalid request syntax or configuration.
+                action: Review and correct your request, then consult the API documentation.
+        '401':
+          description: Invalid login details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                status: 401
+                error: Unauthorized
+                path: /auth/signin
+                timestamp: '2024-02-03T15:40:19.518757Z'
+                cause: Invalid login details provided.
+                action: Check your login credentials and try again.
+  
+
+components:
+  schemas:
+    SignUpRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          description: The email address of the user attempting to sign up. Must be a valid email format.
+        password:
+          type: string
+          format: password
+          description: The password chosen by the user for account creation. Should meet the application's password strength requirements.
+
+    SignInRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          description: The user's email address used for signing in.
+        password:
+          type: string
+          format: password
+          description: The user's password for account access. This should be the same password used at sign-up.
+
+    JwtAuthenticationResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          description: The JSON Web Token (JWT) generated upon successful authentication. This token should be used for authorization in subsequent requests by including it in the request headers.
+
+    ErrorResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          description: The HTTP status code of the response, indicating the nature of the error.
+        error:
+          type: string
+          description: A brief title or description of the error that occurred.
+        path:
+          type: string
+          description: The request path where the error was encountered.
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp when the error occurred, in ISO 8601 format.
+        cause:
+          type: string
+          description: A more detailed explanation of why the error occurred.
+        action:
+          type: string
+          description: Suggested action(s) to resolve the error or to avoid it in future requests.
