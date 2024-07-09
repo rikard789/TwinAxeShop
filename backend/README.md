@@ -59,13 +59,16 @@ mvn spring-boot:run
 
 This starts the TwixAxeShop backend, making it accessible at `http://localhost:8080`.
 
-
 ## Setup for running TwixAxeShop backend in docker
 
 Before running docker-compose, you need to create jar file using command:
 ```bash
 mvn clean install package -DskipTests
 ```
+
+## Swagger
+
+Link to swagger: http://localhost:63342/backend
 
 ## Conclusion
 
