@@ -9,7 +9,6 @@ class Home extends React.Component {
     render() {
         return (
             <div className="h-screen">
-                {/* <div>Hello, World</div> */}
                 <Products addToCart={this.props.addToCart} />
             </div>
         )
