@@ -3,8 +3,7 @@ import axe from '../images/axe1.jpg'
 import axe2 from '../images/twinaxe_art.jpeg'
 
 const products = [
-    {id: 1, image: axe, name: "Axe", specifications: "specifications", description: "description", price: "99.99"},
-    {id: 2, image: axe2, name: "Axe_logo", specifications: "specifications", description: "description", price: "7.99"}
+    {id: 1, image: axe, name: "Axe", specifications: "specifications", description: "description", price: "99.99"}
 ]
 
 class Products extends React.Component{

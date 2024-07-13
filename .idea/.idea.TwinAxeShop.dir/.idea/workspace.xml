@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f390a61a-9d1f-4772-bc2e-b3524448621a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Description.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomeORG.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Payment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProductDescription.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductDescription.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TwinAxeShop.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TwinAxeShop.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +70,8 @@
       <workItem from="1718382294200" duration="4680000" />
       <workItem from="1718459375687" duration="10261000" />
       <workItem from="1718535751509" duration="4198000" />
+      <workItem from="1720538040337" duration="4632000" />
+      <workItem from="1720544909912" duration="639000" />
     </task>
     <servers />
   </component>

@@ -41,7 +41,7 @@ function App() {
                 if (item.id === itemId) {
                     return {
                         ...item,
-                        quantity: Math.max(1, item.quantity + amount) // Ensure quantity does not go below 1
+                        quantity: Math.max(1, item.quantity + amount)
                     };
                 }
                 return item;
@@ -50,15 +50,19 @@ function App() {
         });
     };
 
-
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
+    const clearCart = () => {
+        setCart([]);
+        localStorage.removeItem("cart");
+    };
+
     return (
-        <React.Fragment>
-            <Navbar />
-            <Router>
+        <Router>
+            <React.Fragment>
+                <Navbar clearCart={clearCart} />
                 <Routes>
                     <Route path="/" element={<Home addToCart={addToCart} />} />
                     <Route path="/signin" element={<SignIn />} />
@@ -67,11 +71,13 @@ function App() {
                         path="/cart"
                         element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />}
                     />
-                    <Route path="/productdescription" element={<ProductDescription />} />
-                    <Route path="/payment" element={<Payment />} />
+                    <Route path="/products" element={<Products addToCart={addToCart} />} />
+                    <Route path="/productdescription/:productId" element={<ProductDescription />} />
+                    {/* Pass clearCart function to Payment component */}
+                    <Route path="/payment" element={<Payment clearCart={clearCart} />} />
                 </Routes>
-            </Router>
-        </React.Fragment>
+            </React.Fragment>
+        </Router>
     );
 }
 
