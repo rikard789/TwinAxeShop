@@ -19,7 +19,7 @@ TwinAxeShop requires the configuration of certain environment variables related 
 - `DB_PASSWORD`: Database password
 - `JWT_KEY`: Secret key for JWT token signing
 
-### Step 3: Configuring Environment Variables in IntelliJ IDEA
+### Step 2: Configuring Environment Variables in IntelliJ IDEA
 
 To configure environment variables in IntelliJ IDEA:
 
@@ -39,7 +39,7 @@ JWT_KEY=sQF1C+qQJpmV9A/M8/LPd5esayq2dpG/cD0MCEwJZjM;DB_HOST=jdbc:mysql://localho
 
 7. Click `Apply` and then `OK` to save the configuration.
 
-### Step 4: Building the Application
+### Step 3: Building the Application
 
 To build the TwixAxeShop application, use the following Maven command:
 
@@ -49,7 +49,7 @@ mvn clean install
 
 This command compiles the project and runs any tests, ensuring the application is correctly set up.
 
-### Step 5: Running the Application
+### Step 4: Running the Application
 
 After successfully building the project, run it with Maven by executing:
 
@@ -70,9 +70,7 @@ mvn clean install package -DskipTests
 
 Link to swagger: http://localhost:63342/backend
 
-## Conclusion
 
-Following these instructions, you have successfully set up and launched the TwixAxeShop service on your local machine.
 
 
 
