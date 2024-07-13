@@ -1,3 +1,4 @@
+Mateusz Ptaszyński, Krzysztof Reczek
 # Aim of the project
 We want to create web store, for selling axes. It should work in most popular browsers, be easy to use and well designed. It has to have option of registering and signing in, browsing products (and their specialized data) and adding products to the cart. Cart should be editable, also there has to be page for ordering selected products.
 # Setup
